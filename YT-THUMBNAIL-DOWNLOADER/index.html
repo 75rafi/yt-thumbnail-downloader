@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pl"> <!-- page is currently in PL - Polish language. -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pobieracz Miniaturki YouTube</title>
+    <link rel="icon" type="image/png" href="75r_logotransparent.png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="top-bar">
+        <img src="75r_logotransparent.png" alt="Logo" class="logo">
+        <h3>MiniaturkaDownloader</h3>
+    </div>
+    
+    <p>Wklej link do wideo z YouTube, wybierz format i pobierz miniaturkę!</p>
+
+    <input type="text" id="videoUrl" placeholder="Wklej link do YouTube" size="50">
+    <select id="fileFormat">
+        <!-- Format pliku (okienko)-->
+        <option style="color: #000000;" value="jpg">JPG</option>
+        <option style="color: #000000;" value="png">PNG</option>
+        <option style="color: #000000;" value="gif">GIF</option>
+        <option style="color: #000000;" value="webp">WEBP</option>
+    </select>
+    <button onclick="getThumbnail()">Pobierz Miniaturkę</button>
+    <small style="color: #4a4a4a;">
+        Uwaga: Pobrane miniaturki, jak i inne nie są przechowywane na stronie. Po odświeżeniu strony, wszystko zostanie <strong>usunięte</strong>
+    </small>
+
+    <div id="thumbnail">
+        <p>Podgląd:</p>
+        <img id="thumbnailImage" src="" alt="Miniaturka YouTube" style="display: none;">
+        <a id="downloadLink" href="" download="thumbnail.jpg">Pobierz Miniaturkę</a>
+        <div id="loadingText">Ładowanie...</div>
+        <div class="progress-bar">
+            <div class="progress" id="progressBar"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+    <footer>
+        <div class="footer-left" style="color: #292929;">
+            bojler.dev Development build, Open Beta 24/02/2025
+        </div>
+        To narzędzie jest przeznaczone wyłącznie do użytku osobistego. Pobrane <strong>miniaturki</strong> są własnością YouTube oraz ich właścicieli. Pobierając akceptujesz <a href="https://www.youtube.com/t/terms" target="_blank" style="color: #00547e;">Warunki korzystania z YouTube</a>. <br>
+        <a href="https://tipply.pl/@123rafi321" target="_blank" style="color: #a0a0a0;">Wesprzyj</a> / <a href="kontakt.html" target="_blank" style="color: #a0a0a0;">Kontakt</a><br>
+        <strong style="color: #3f3f3f;">(C) 2022 - 2025 bojler.dev / aka</strong> <strong style="color: #2c2c2c;"><a href="https://bojlertech.github.io" target="_blank" style="color: #292929;">bojlertech.github.io</a></strong>
+    </footer>
+</body>
+</html>
+<!-- Do NOT delete this, if you want to use this script in commerical page. (C) bojlerdev 2022 - 2025 / GITHUB @75rafi -->
+<!----------------------------------------------------------------------------------------------------------------------->
+
+<!-- Disclaimer: This script is provided for educational and informational purposes only.
+The author is not responsible for any misuse, legal issues, or damage resulting from the use of this script.
+Users are responsible for ensuring compliance with YouTube's terms of service - (https://www.youtube.com/t/terms) and applicable laws. -->

@@ -1,0 +1,133 @@
+html, body {
+    height: 100%;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #0d0d0d;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding-top: 80px;
+}
+input, button, select {
+    padding: 12px 16px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    border-radius: 12px;
+    border: none;
+    outline: none;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    backdrop-filter: blur(5px);
+    transition: background-color 0.3s ease;
+}
+button {
+    background: rgba(255, 255, 255, 0.15);
+    cursor: pointer;
+}
+button:hover {
+    background: rgba(255, 255, 255, 0.25);
+}
+/* input-select */
+input#videoUrl, select#fileFormat {
+    background: rgba(255, 255, 255, 0.15);
+    color: white;
+    border: none;
+    padding: 12px 16px;
+    font-size: 16px;
+    border-radius: 12px;
+    backdrop-filter: blur(5px);
+    outline: none;
+    transition: background-color 0.3s ease;
+}
+input#videoUrl::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+input#videoUrl:focus, select#fileFormat:focus {
+    background: rgba(255, 255, 255, 0.25);
+}
+#thumbnail {
+    margin-top: 20px;
+    text-align: center;
+}
+img {
+    width: 320px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+#loadingText {
+    margin-top: 10px;
+    display: none;
+    font-size: 18px;
+}
+#downloadLink {
+    display: none;
+    margin-top: 10px;
+    color: #1db954;
+    font-weight: bold;
+}
+/* top bar */
+.top-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px;
+    backdrop-filter: blur(5px); /* Cień tła dla paska */
+    background: rgba(20, 20, 20, 0.8); 
+    color: white;
+    display: flex;
+    align-items: center;
+    z-index: 9999;
+    justify-content: flex-start; /* Ustawić zawartość w lewo */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); /* Cień paska */
+}
+
+/* Logo */
+.logo {
+    width: 70px;  /* Ustawiamy szerokość logo */
+    height: auto; /* Automatyczna wysokość */
+    margin-right: 15px; /* Dystans między logo a tekstem */
+}
+.progress-bar {
+    width: 100%;
+    height: 6px;
+    background-color: rgba(255, 255, 255, 0.1);
+    margin-top: 10px;
+    border-radius: 3px;
+    display: none;
+}
+.progress {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, #1db954, #1ed760);
+    transition: width 0.3s ease-in-out, background 0.3s ease-in-out;
+    border-radius: 3px;
+}
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 12px;
+    color: #5a5a5a;
+    padding: 10px 0;
+}
+.footer-left {
+    cursor: default;
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    font-size: 12px;
+    color: #4a4a4a;
+}
+.footer-left:hover {
+    cursor: help;
+}
