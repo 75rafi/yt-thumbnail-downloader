@@ -1,14 +1,13 @@
-// (C) 2025 bojler.dev (yt-thumbnail-downloader/script.js) 
+// (C) 2025 @75rafi (yt-thumbnail-downloader/script.js) 
 //
-// Copyright @75rafi https://github.com/75rafi // Do NOT delete this, if you want to use this script in commerical page. //
-// 
-// Java Script \/
+// Copyright @75rafi https://github.com/75rafi //
+
 function setTitle(text) {
     document.title = text;
 }
 
 function getThumbnail() {
-    document.body.style.cursor = 'progress'; // Ustawienie kursora na ładowanie
+    document.body.style.cursor = 'progress';
     document.getElementById('thumbnailImage').style.display = 'none';
     document.getElementById('downloadLink').style.display = 'none';
     document.getElementById('loadingText').style.display = 'block';
@@ -79,7 +78,7 @@ function downloadThumbnail(thumbnailUrl, format) {
             document.getElementById('loadingText').style.display = 'none';
             updateProgress(100);
             setTitle("Pomyślnie pobrano!");
-            document.body.style.cursor = 'default'; // loading cursor 1
+            document.body.style.cursor = 'default';
             setTimeout(() => setTitle("Pobieracz Miniaturki YouTube"), 3000);
         } else {
             handleError("[404] - Miniaturka niedostępna.");
@@ -97,7 +96,7 @@ function downloadThumbnail(thumbnailUrl, format) {
 function handleError(message) {
     alert(`Błąd: ${message}`);
     document.getElementById('loadingText').style.display = 'none';
-    document.body.style.cursor = 'default'; // loading cursor 2
+    document.body.style.cursor = 'default';
     setTitle("[404]");
     setTimeout(() => setTitle("Pobieracz Miniaturki YouTube"), 3000);
 }
