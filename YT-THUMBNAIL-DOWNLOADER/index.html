@@ -1,15 +1,15 @@
 <!-- (C) 2025 bojler.dev (yt-thumbnail-downloader/index.html) 
 //
-// Copyright @75rafi https://github.com/75rafi // Do NOT delete this, if you want to use this script in commerical page. //
+// Copyright @75rafi https://github.com/75rafi //
 // 
 // HTML Script \/ -->
 
 <!DOCTYPE html>
-<html lang="pl"> <!-- page is currently in PL - Polish language. -->
+<html lang="pl"> <!-- page is currently in PL/EN language -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pobieracz Miniaturki YouTube</title>
+    <title>YT Thumbnail Downloader</title>
     <link rel="icon" type="image/png" href="75r_logotransparent.png">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
@@ -17,10 +17,10 @@
 <body>
     <div class="top-bar">
         <img src="75r_logotransparent.png" alt="Logo" class="logo">
-        <h3>MiniaturkaDownloader</h3>
+        <h3>ThumbnailDownloader</h3>
     </div>
     
-    <p>Wklej link do wideo z YouTube, wybierz format i pobierz miniaturkę!</p>
+    <p>Paste video link here, and choose file format!</p>
 
     <input type="text" id="videoUrl" placeholder="Wklej link do YouTube" size="50">
     <select id="fileFormat">
@@ -30,7 +30,7 @@
         <option style="color: #000000;" value="gif">GIF</option>
         <option style="color: #000000;" value="webp">WEBP</option>
     </select>
-    <button onclick="getThumbnail()">Pobierz Miniaturkę</button>
+    <button onclick="getThumbnail()">Download</button>
     <small style="color: #4a4a4a;">
         Uwaga: Pobrane miniaturki, jak i inne nie są przechowywane na stronie. Po odświeżeniu strony, wszystko zostanie <strong>usunięte</strong>
     </small>
